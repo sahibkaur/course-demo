@@ -199,6 +199,11 @@ a {
     color: #fff;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .btn--primary:hover {
     background-color: #3a8ffd;
 }
@@ -467,5 +472,45 @@ a {
     .testimonial .quote {
         margin-left: 6rem;
         margin-right: 0;
+    }
+}
+
+/*Callouts*/
+
+.callout {
+    padding: 2rem;
+    border-radius: 5px;
+}
+.callout--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+
+}
+.callout__heading {
+    color: white;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--cols-2 {
+        grid-template-columns: 1fr auto;
+    }
+
+    .callout__content {
+        text-align: left;
+    }
+    .callout .btn {
+        justify-self: start;
+        margin: 0 2rem; 
     }
 }
