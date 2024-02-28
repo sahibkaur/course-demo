@@ -410,3 +410,17 @@ a {
     }
 
   }
+
+  /*Grids*/
+
+  .grid {
+    display: grid;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .grid--cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+  }
+ 
