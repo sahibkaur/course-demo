@@ -246,6 +246,17 @@ a {
     border: 2px solid var(--color-heading);
 }
 
+.btn--popular {
+    background: var(--color-heading);
+    color: #fff;
+}
+
+.btn--popular:hover {
+    background-color: #fff;
+    color: var(--color-heading);
+    border: 2px solid var(--color-heading);  
+}
+
 .btn--outline:hover {
     background: var(--color-heading);
     color: #fff;
@@ -316,8 +327,18 @@ a {
     background: var(--color-secondary);
     color: #fff;
   }
+  .card--secondary .badge--secondary {
+    background-color: #02cdf1;
+  }
+  .card--primary .badge--primary {
+    background-color: #126de4;
+  }
 
   /* Plans */
+.plan {
+    transition: transform .2s ease-out;
+}
+
 .plan__name {
     color: #fff;
     margin: 0;
@@ -346,6 +367,10 @@ a {
   .plan .list__item {
     margin-bottom: 2rem;
   }
+
+  .plan--popular {
+    transform: scale(1.1);
+  }
   
   .plan--popular .card__header {
     position: relative;
@@ -358,6 +383,14 @@ a {
     position: absolute;
     top: -6px;
     right: 5%;
+  }
+
+  .plan:hover {
+    transform: scale(1.05);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
   
 
@@ -446,6 +479,9 @@ a {
   @media screen and (min-width: 768px) {
     .grid--cols-2 {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid--cols-3 {
+        grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -709,4 +745,13 @@ a {
     .block-domain__prices {
         grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
     }
+}
+
+/* Plans Block */
+.block-plans .grid {
+    gap: 8rem 4rem;
+}
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto
 }
